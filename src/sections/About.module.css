@@ -1,0 +1,34 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    background-color: #212529;
+    padding: 3rem 6rem;
+}
+
+.about header {
+    text-align: center;
+    width: 100%;
+    color: white;
+    font-size: 3rem;
+    border-bottom: solid 1px #ffffff;
+}
+
+.about .main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.about .main img {
+    height: 24rem;
+    width: auto;
+}
+
+.about .main div p {
+    color: white;
+    text-align: justify;
+}

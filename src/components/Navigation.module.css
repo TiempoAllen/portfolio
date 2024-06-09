@@ -1,0 +1,24 @@
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.nav ul {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav li {
+    cursor: pointer;
+}
+
+.nav .call {
+    border-radius: 30px;
+    border: solid 1px #F6B17A;
+    padding: 0.25rem 0.5rem;
+    background-color: #F6B17A;
+    color: black;
+}
