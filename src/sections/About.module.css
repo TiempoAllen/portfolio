@@ -8,14 +8,6 @@
     padding: 3rem 6rem;
 }
 
-.about header {
-    text-align: center;
-    width: 100%;
-    color: white;
-    font-size: 3rem;
-    border-bottom: solid 1px #ffffff;
-}
-
 .about .main {
     display: flex;
     align-items: center;
@@ -24,11 +16,45 @@
 }
 
 .about .main img {
-    height: 24rem;
+    height: 28rem;
     width: auto;
+}
+
+.about .main div h1 {
+    color: #F6B17A;
+    font-size: 3rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+}
+
+.about .main div h1 span {
+    color: #F6B17A;
 }
 
 .about .main div p {
     color: white;
     text-align: justify;
+}
+
+.about .main div ul {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about .main div ul p {
+    margin: 1rem 0;
+}
+
+.about .main div ul p span {
+    font-weight: 900;
+}
+
+.about .main div button {
+    cursor: pointer;
+    background-color: #F6B17A;
+    border-radius: 15px;
+    border: solid 1px #F6B17A;
+    padding: 0.5rem 1rem;
 }
