@@ -4,60 +4,117 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 3rem 6rem;
+    padding: 5rem 6rem;
 }
 
 .skills h1 {
     font-size: 3rem;
-    color: #F6B17A;
+    color: white;
     margin-bottom: 2rem;
-    font-weight: normal;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
 }
 
-.skills ul {
+.skills h1::before {
+    content: "";
+    position: absolute;
+    top: 65%;
+    left: 0;
+    width: 100%;
+    height: 15%;
+    background-color: #F6B17A;
+    z-index: -1;
+}
+
+.skills .main {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skills .main li {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
-}
-
-.skills ul div {
-    display: flex;
     align-items: center;
     justify-content: center;
-    gap: 3rem;
+    max-width: 24rem;
+    padding: 1rem;
 }
 
-.skills li {
+.skills .main li .header {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    margin: 0.5rem;
 }
 
-/* .skills li .percentage {
-    font-size: 2rem;
-    padding: 3rem 2.7rem;
-    border-radius: 50%;
-    border: solid 5px #F6B17A;
-} */
 
-.skills li .percentage {
-    position: relative;
-    font-size: 2rem;
-    padding: 3rem 2.7rem;
-    border: solid 5px transparent;
-    border-image: conic-gradient(from 0deg, #F6B17A var(--percentage, 0%), transparent var(--percentage, 0%)) 1;
-    border-radius: 50%;
+
+.skills .main li .header img {
+    height: 4rem;
+    width: auto;
+}
+
+.skills .main li .header .title {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: start;
     justify-content: center;
-    box-sizing: border-box;
 }
 
+.skills .main li .header .title h2:first-child {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
 
-.skills li .percentage::after {
-    content: attr(data-percentage);
+.skills .main li:nth-child(1) .header .title h2:first-child::before {
+    content: "";
     position: absolute;
-    color: white;
+    top: 65%;
+    left: 0;
+    width: 100%;
+    height: 15%;
+    background-color: #FF0080;
+    z-index: -1;
+}
+
+.skills .main li:nth-child(2) .header .title h2:first-child::before {
+    content: "";
+    position: absolute;
+    top: 65%;
+    left: 0;
+    width: 100%;
+    height: 15%;
+    background-color: hsl(216, 100%, 50%);
+    z-index: -1;
+}
+
+.skills .main li:nth-child(3) .header .title h2:first-child::before {
+    content: "";
+    position: absolute;
+    top: 65%;
+    left: 0;
+    width: 100%;
+    height: 15%;
+    background-color: #ff7b00;
+    z-index: -1;
+}
+
+.skills .main li p {
+    max-width: 22rem;
+}
+
+@media (max-width: 767px) {
+    .skills {
+        padding: 3rem 3rem;
+    }
+
+    .skills .main li p {
+        text-align: center;
+    }
 }

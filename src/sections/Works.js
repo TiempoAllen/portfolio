@@ -1,33 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import classes from "./Work.module.css";
-import project1 from "../assets/project1.png";
-import project2 from "../assets/project2.png";
-import project3 from "../assets/project3.png";
-import project4 from "../assets/project4.png";
-import project5 from "../assets/project5.png";
-
-const WORKS = [
-  { name: "Sky Landing Page", src: project1, type: "Frontend Development" },
-  { name: "Calculator", src: project2, type: "Web Development" },
-  {
-    name: "CITU Streamlined Service Portal",
-    src: project3,
-    type: "Full-Stack Development",
-  },
-  { name: "Weather App", src: project4, type: "Full-Stack Development" },
-  { name: "Campus Sync", src: project5, type: "Full-Stack Development" },
-];
+import arrow from "../assets/arrow.svg";
+import { WORKS } from "../utils/utils";
 
 const Works = () => {
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+
+  const handleClick = (url) => {
+    window.open(url, "_blank");
+  };
+
   return (
-    <section className={classes.works}>
+    <section className={classes.works} id="works">
       <h1 className={classes.header}>My Works</h1>
       <ul className={classes.main}>
-        {WORKS.map((work) => (
-          <li>
-            <img src={work.src} alt={work.name} />{" "}
-            <h1 className={classes.work_name}>{work.name}</h1>
-            <p className={classes.work_type}>{work.type}</p>
+        {WORKS.map((work, index) => (
+          <li
+            key={index}
+            onMouseEnter={() => setHoveredIndex(index)}
+            onMouseLeave={() => setHoveredIndex(null)}
+          >
+            <img src={work.src} alt={work.name} />
+            <div>
+              <h1 className={classes.work_name}>{work.name}</h1>
+              {hoveredIndex === index ? (
+                <p
+                  className={classes.work_type}
+                  onClick={() => handleClick(work.github)}
+                >
+                  <span>Go to Github</span> <img src={arrow} alt="arrow" />
+                </p>
+              ) : (
+                <p className={classes.work_type}>{work.type}</p>
+              )}
+            </div>
           </li>
         ))}
       </ul>

@@ -1,9 +1,17 @@
 .nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    gap: 48rem;
     color: white;
+    position: fixed;
+    top: 0;
+    width: auto;
+    z-index: 1000;
+    padding: 1rem;
+    backdrop-filter: blur(10px);
 }
+
 
 .nav ul {
     display: flex;
@@ -15,10 +23,34 @@
     cursor: pointer;
 }
 
+.nav li:hover {
+    color: #F6B17A;
+}
+
+.nav li a:hover {
+    color: #F6B17A;
+}
+
 .nav .call {
     border-radius: 30px;
+    font-size: 1rem;
     border: solid 1px #F6B17A;
     padding: 0.25rem 0.5rem;
     background-color: #F6B17A;
-    color: black;
+    color: white;
+}
+
+@media (max-width: 767px) {
+    .nav {
+        position: static;
+        padding: 0 3rem;
+    }
+
+    .nav h1 {
+        text-align: center;
+    }
+
+    .nav ul {
+        display: none;
+    }
 }

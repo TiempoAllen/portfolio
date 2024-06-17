@@ -1,6 +1,6 @@
 .works {
-    padding: 3rem 6rem;
-    background-color: #212529;
+    padding: 5rem 6rem;
+    background-color: rgb(18, 18, 18);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,9 +9,23 @@
 
 .works .header {
     font-size: 3rem;
-    color: #F6B17A;
+    color: white;
     font-weight: normal;
     margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.works .header::before {
+    content: "";
+    position: absolute;
+    top: 65%;
+    left: 0;
+    width: 100%;
+    height: 15%;
+    background-color: #f6b17a;
+    z-index: -1;
 }
 
 .works .main {
@@ -22,31 +36,6 @@
     gap: 3rem;
 }
 
-/* .works .main li {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: start;
-    background-color: rgb(29, 29, 36);
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-
-
-.works .main li img {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    height: 16rem;
-    width: auto;
-    margin-bottom: 1rem;
-    transition: transform .2s;
-}
-
-.works .main li img:hover {
-    transform: scale(1.1);
-} */
-
 .works .main li {
     position: relative;
     display: flex;
@@ -54,16 +43,15 @@
     align-items: start;
     justify-content: start;
     background-color: rgb(29, 29, 36);
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: pointer;
     overflow: hidden;
     width: auto;
-    /* Fixed width to control the zoom area */
 }
 
 .works .main li img {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     height: 16rem;
     width: 100%;
     margin-bottom: 1.5rem;
@@ -76,7 +64,7 @@
 }
 
 .works .main li::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -87,18 +75,43 @@
     transition: background-color 0.2s;
 }
 
-/* .works .main li:hover::after {
-    background-color: rgba(0, 0, 0, 0.5);
-} */
-
 .works .main li .work_name,
 .work_type {
     position: relative;
     z-index: 1;
+}
+
+.works .main li div {
     margin: 0 1rem 1rem 1.5rem;
 }
 
-.works .main li h1 {
+.works .main li div h1 {
     font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+}
+
+.works .main li div p {
+    color: #e6e6e6;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.works .main li div p img {
+    height: 1.2rem;
+    width: auto;
+    margin: 0;
+}
+
+.works .main li div p:hover {
+    color: #f6b17a;
+}
+
+@media (max-width: 767px) {
+    .works {
+        padding: 3rem 2rem;
+    }
+
+    .works .main li img {
+        height: 12rem;
+    }
 }

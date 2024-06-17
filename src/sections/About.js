@@ -1,17 +1,24 @@
 import React from "react";
 import classes from "./About.module.css";
 import id from "../assets/id.jpg";
+import fileurl from "../assets/CV.pdf";
 
 const About = () => {
+  const handleDownloadClick = () => {
+    const link = document.createElement("a");
+    link.href = fileurl;
+    link.download = "Tiempo-CV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
-    <section className={classes.about}>
-      {/* <header>Discover</header> */}
+    <section className={classes.about} id="about">
       <div className={classes.main}>
         <img src={id} alt="id" />
         <div>
-          <h1>
-            About <span>Me</span>
-          </h1>
+          <h1>About Me</h1>
           <p>
             Welcome to my corner of the internet! I'm John Allen Tiempo, a web
             developer based in Cebu City, Philippines. With a passion for web
@@ -34,9 +41,6 @@ const About = () => {
               <p>
                 <span>Date of Birth:</span> August 09, 2001
               </p>
-              <p>
-                <span>Wife:</span> Honey Sheene V. Repunte
-              </p>
             </li>
             <li>
               <p>
@@ -47,7 +51,7 @@ const About = () => {
               </p>
             </li>
           </ul>
-          <button>DOWNLOAD CV</button>
+          <button onClick={handleDownloadClick}>DOWNLOAD CV</button>
         </div>
       </div>
     </section>
