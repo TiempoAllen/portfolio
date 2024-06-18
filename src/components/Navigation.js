@@ -7,16 +7,24 @@ const Navigation = () => {
       <h1>Allen Tiempo</h1>
       <ul>
         <li>
-          <a href="#about">About Me</a>
+          <a href="#about" className="nav-link">
+            About Me
+          </a>
         </li>
         <li>
-          <a href="#skills">Skills</a>
+          <a href="#skills" className="nav-link">
+            Skills
+          </a>
         </li>
         <li>
-          <a href="#works">Projects</a>
+          <a href="#works" className="nav-link">
+            Projects
+          </a>
         </li>
         <button className={classes.call}>
-          <a href="#contact">Get in touch!</a>
+          <a href="#contact" className="nav-link">
+            Get in touch!
+          </a>
         </button>
       </ul>
     </nav>

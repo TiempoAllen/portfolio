@@ -9,8 +9,12 @@ const Name = () => {
         <h1>ALLEN TIEMPO</h1>
         <p>Full-Stack Web Developer</p>
         <div className={classes.buttons}>
-          <button>HIRE ME</button>
-          <button>MY WORKS</button>
+          <button>
+            <a href="#contact">HIRE ME</a>
+          </button>
+          <button>
+            <a href="#works">MY WORKS</a>
+          </button>
         </div>
       </main>
     </section>

@@ -10,7 +10,7 @@
 .works .header {
     font-size: 3rem;
     color: white;
-    font-weight: normal;
+    font-weight: 600;
     margin-bottom: 2rem;
     position: relative;
     overflow: hidden;
@@ -108,7 +108,7 @@
 
 @media (max-width: 767px) {
     .works {
-        padding: 3rem 2rem;
+        padding: 3rem 1rem;
     }
 
     .works .main li img {

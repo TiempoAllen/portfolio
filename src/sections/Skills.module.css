@@ -114,6 +114,10 @@
         padding: 3rem 3rem;
     }
 
+    .skills h1 {
+        font-size: 2.5rem;
+    }
+
     .skills .main li p {
         text-align: center;
     }

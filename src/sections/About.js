@@ -50,6 +50,26 @@ const About = () => {
                 <span>Email:</span> tiempoallen@gmail.com
               </p>
             </li>
+            {/* <li>
+              <p>
+                <span>Name:</span> John Allen Tiempo
+              </p>
+            </li>
+            <li>
+              <p>
+                <span>Date of Birth:</span> August 09, 2001
+              </p>
+            </li>
+            <li>
+              <p>
+                <span>Address:</span> Capitol Site Cebu City, Philippines
+              </p>
+            </li>
+            <li>
+              <p>
+                <span>Email:</span> tiempoallen@gmail.com
+              </p>
+            </li> */}
           </ul>
           <button onClick={handleDownloadClick}>DOWNLOAD CV</button>
         </div>
